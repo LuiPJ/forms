@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic);
+body,
+html {
+  margin: 0;
+  font-family: muli, serif;
+  width: 100%;
+  padding: 0;
+  overflow-x:hidden;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+label {
+  margin-left: 10px;
+}
+.container-box {
+  padding: 0;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-boxes-input {
+  width: 20px;
+  text-align: center;
+}
+
+
+input[type=text] {
+  text-align: center; 
+  box-sizing: border-box;
+  border: 0.1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 1px solid #40cfff;
+}
+
+.input-hex,
+.input-rgb {
+  height: 45px;
+  width: 130px;
+  margin: 5px;
+}
+
+.input-hex {
+  color: black;
+  background-color: white;
+}
+
+.input-rgb {
+  color: white;
+  background-color: rgb(29,40,53, 0.8);
+}
