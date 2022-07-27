@@ -11,7 +11,7 @@ export const Training = () => {
 
   let sortDateItems = stepItems.sort((a, b) => new Date(a.date) - new Date(b.date));
   const createStepItem = (date, distance) => {
-    if (!date || !distance) return false
+    if (!date && !distance) return false
     for (let i = 0; i < stepItems.length; i++) {
       if (date === stepItems[i].date) {
         return {

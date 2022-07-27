@@ -36,6 +36,7 @@ export const Convert = () => {
       <div className="container-boxes-input">
         <input
           className="input-hex"
+          placeholder="Введите hex"
           type="text"
           name="hex"
           value={hexInput.hexColor}
