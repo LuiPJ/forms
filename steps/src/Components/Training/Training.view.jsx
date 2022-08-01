@@ -9,20 +9,21 @@ export const Training = () => {
     { id: uuidv4(), date: '2022-07-24', distance: 10 },
   ]);
 
-  let sortDateItems = stepItems.sort((a, b) => new Date(a.date) - new Date(b.date));
+  let sortDateItems = stepItems.sort((a, b) => new Date(b.date) - new Date(a.date));
   const createStepItem = (date, distance) => {
+    const parseDistance = parseInt(distance)
     if (!date && !distance) return false
     for (let i = 0; i < stepItems.length; i++) {
       if (date === stepItems[i].date) {
         return {
           ...stepItems,
-          distance: stepItems[i].distance += +distance
+          distance: stepItems[i].distance += parseDistance
         }
       }
     };
     const newStepItem = [
       ...stepItems,
-      { id: uuidv4(), date: date, distance: distance }]
+      { id: uuidv4(), date: date, distance: parseInt(distance) }]
     setStepItems(newStepItem)
   };
   const [valueDistance, setValueDistance] = useState("");
